@@ -1,0 +1,40 @@
+<div class="dashboard-container">
+    <header>
+      <h1>GrowServer WebPanel</h1>
+      <div class="status">
+        <span>Status:</span>
+        <span class="status-dot" id="status-dot" data-status="<%= serverStatus %>"></span>
+        <link rel="stylesheet" href="/css/style.css">
+      </div>
+    </header>
+    <div class="stats-container">
+      <section class="stats">
+        <h2>Server Stats</h2>
+        <p>Players Online: <%= playersOnline %></p>
+      </section>
+      <section class="logs">
+        <h2>Logs</h2>
+        <ul id="logs">
+          <% logs.forEach(log => { %>
+            <li><%= log %></li>
+          <% }); %>
+        </ul>
+      </section>
+    </div>
+    <div class="middle-container">
+      <section class="broadcast">
+        <h2>Broadcasts And Super Broadcasts?</h2>
+        <div class="broadcast-container">
+          <ul id="broadcasts">
+            <li>[SB] Player1: Welcome to GrowServer!</li>
+            <li>[Broadcast] example</li>
+          </ul>
+        </div>
+      </section>
+      <section class="commands">
+        <h2>Command Console</h2>
+        <input type="text" id="command" placeholder="Enter command">
+        <button id="run-command">Run</button>
+      </section>
+    </div>
+  </div>

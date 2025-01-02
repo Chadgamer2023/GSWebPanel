@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowServer - Login</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Login Page Specific Styles */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #3b3e4c, #282c34);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      background-color: #44495a;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      width: 300px;
+    }
+
+    .login-container h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #61dafb;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #555;
+      background-color: #3b3e4c;
+      color: white;
+    }
+
+    .login-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #61dafb;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-container input[type="submit"]:hover {
+      background-color: #51c4e3;
+    }
+
+    .login-container p {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    .login-container p a {
+      color: #61dafb;
+      text-decoration: none;
+    }
+
+    .login-container p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>GrowServer Login</h1>
+    <form method="POST" action="/login">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="/register">Register here</a></p>
+  </div>
+</body>
+</html>
